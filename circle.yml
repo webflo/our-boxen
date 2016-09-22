@@ -1,0 +1,6 @@
+dependencies:
+  pre:
+    - brew install cowsay
+test:
+  override:
+    - cowsay Hi!
