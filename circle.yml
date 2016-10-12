@@ -1,3 +1,7 @@
+machine:
+  environment:
+    XCODE_SCHEME: boxen
+    XCODE_WORKSPACE: boxen
 dependencies:
   pre:
     - brew install cowsay
