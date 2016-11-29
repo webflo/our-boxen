@@ -2,9 +2,8 @@ machine:
   environment:
     XCODE_SCHEME: boxen
     XCODE_WORKSPACE: boxen
-dependencies:
-  pre:
-    - brew install cowsay
+  xcode:
+    version: 8.0
 test:
   override:
-    - cowsay Hi!
+    - ./script/boxen --no-fde --no-pull
