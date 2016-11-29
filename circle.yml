@@ -6,4 +6,4 @@ machine:
     version: 8.0
 test:
   override:
-    - ./script/boxen --no-fde --no-pull --login webflo
+    - ./script/boxen --no-fde --no-pull --login=$CI_BOXEN_USER --password=$CI_BOXEN_PASSWORD
