@@ -6,4 +6,8 @@ machine:
     version: 8.0
 test:
   override:
+    - sudo mkdir -p /opt/boxen
+    - sudo chown ${USER}:staff /opt/boxen
+    - sudo ln -nfs $(pwd) /opt/boxen/repo
+    - cd /opt/boxen/repo
     - ./script/boxen --no-fde --no-pull --login=$CI_BOXEN_USER --password=$CI_BOXEN_PASSWORD
